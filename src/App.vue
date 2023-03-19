@@ -1,16 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<AppHeader></AppHeader>
+  <main>
+    <AppTodo ></AppTodo>
+    <ul class="todos">
+      <ListTodo></ListTodo>
+      <ListTodo></ListTodo>
+  
+    </ul>
+    <div class="card stat">
+      <p class="corner"><span id="items-left">0</span> مورد باقی مانده</p>
+      <div class="filter">
+        <button id="all" class="on">همه</button>
+        <button id="active">فعال</button>
+        <button id="completed">تکمیل</button>
+      </div>
+      <div class="corner">
+        <button id="clear-completed">حذف تکمیل شده ها</button>
+      </div>
+    </div>
+  </main>
+  <AppFooter></AppFooter>
+ 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
+import AppTodo from './components/AppTodo.vue';
+import ListTodo from './components/ListTodo.vue';
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {AppHeader, AppFooter,AppTodo,ListTodo}
 }
 </script>
 
