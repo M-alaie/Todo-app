@@ -1,7 +1,7 @@
 <template>
 <AppHeader></AppHeader>
   <main>
-    <AppTodo ></AppTodo>
+    <AddTodo ></AddTodo>
     <ul class="todos">
       <ListTodo v-for="(item,index) in todos" :key="index" :todo="item"></ListTodo>
     </ul>
@@ -24,10 +24,8 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
-
+import AddTodo from './components/AddTodo.vue'
 import ListTodo from './components/ListTodo.vue';
-import AddTodo from './components/AddTodo.vue';
-
 
 export default {
   data(){
