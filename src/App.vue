@@ -3,9 +3,7 @@
   <main>
     <AppTodo ></AppTodo>
     <ul class="todos">
-      <ListTodo></ListTodo>
-      <ListTodo></ListTodo>
-  
+      <ListTodo v-for="(item,index) in todos" :key="index" :todo="item"></ListTodo>
     </ul>
     <div class="card stat">
       <p class="corner"><span id="items-left">0</span> مورد باقی مانده</p>
@@ -26,13 +24,23 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
-import AppTodo from './components/AppTodo.vue';
+
 import ListTodo from './components/ListTodo.vue';
+import AddTodo from './components/AddTodo.vue';
 
 
 export default {
+  data(){
+    return{
+      todos:[
+        {title:"یادگیری در Vue", iscpmplete:false},
+        {title:" یاد گیری جاوا اسکریپت", iscpmplete:true}
+
+      ]
+    }
+  },
   name: 'App',
-  components: {AppHeader, AppFooter,AppTodo,ListTodo}
+  components: {AppHeader, AppFooter,AddTodo,ListTodo}
 }
 </script>
 
