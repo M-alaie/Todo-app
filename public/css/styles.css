@@ -114,6 +114,7 @@ label {
     align-items: center;
     padding: 1.9rem 2rem;
     gap: 2rem;
+
 }
 
 
@@ -143,6 +144,7 @@ header.card h1 {
     align-items: center;
     justify-content: center;
     position: relative;
+   
 }
 
 .card .cb-container .cb-input {
