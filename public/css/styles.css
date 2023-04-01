@@ -114,6 +114,7 @@ label {
     align-items: center;
     padding: 1.9rem 2rem;
     gap: 2rem;
+    
 
 }
 
@@ -232,7 +233,8 @@ body.light .add .txt-container .txt-input {
 }
 
 .todos .card[draggable] {
-    cursor: move;
+    cursor: all-scroll;
+
 }
 
 .todos .card:first-child {
